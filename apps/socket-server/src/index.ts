@@ -3,13 +3,14 @@ import { createServer } from 'node:http';
 import jwt from 'jsonwebtoken'; 
 import { Server } from 'socket.io';
 import bcrypt from 'bcrypt';
+import {backendConfig} from '@repo/backend-config/config';
 
 const app = express();
 const server = createServer(app);
 const io = new Server(server);
 
 const port = 8080; 
-const JWT_SECRET = "rishabh";
+const JWT_SECRET = backendConfig.jwtSecret;
 
 console.log('socket server started');
 app.get('/', (req, res) => {
