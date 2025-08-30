@@ -6,11 +6,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -b",
     "start": "node dist/index.js",
-    "dev": "npm run build && npm run start"
+    "worker": "node dist/worker.js",
+    "dev": "npm run build && npm run start && npm run worker"
   },
   "devDependencies": {
+    "@repo/backend-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@repo/backend-config": "workspace:*"
+    "@repo/db_config": "workspace:*"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +21,9 @@
   "dependencies": {
     "@types/express": "^5.0.3",
     "bcrypt": "^6.0.0",
+    "bullmq": "^5.58.3",
     "express": "^5.1.0",
+    "ioredis": "^5.7.0",
     "jsonwebtoken": "^9.0.2",
     "socket.io": "^4.8.1"
   }

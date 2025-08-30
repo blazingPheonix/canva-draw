@@ -1,0 +1,21 @@
+{
+  "name": "mqservice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc -b && node dist/index.js"
+  },
+  "devDependencies": {
+    "@repo/db_config": "workspace:*",
+    "@repo/typescript-config": "workspace:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bullmq": "^5.58.3",
+    "ioredis": "^5.7.0"
+  }
+}
